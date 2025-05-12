@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ہومیوپیتھک ادویات - بیماریاں </title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .no-select {
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+    }
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+    .search-container {
+      text-align: center;
+      margin: 20px;
+    }
+    .search-box {
+      padding: 10px;
+      width: 80%;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#">صفحہ اول</a>
+    <a href="#">ادویات</a>
+    <a href="diseases.html">بیماریاں</a>
+    <a href="#">متعلقہ معلومات</a>
+    <a href="#">رابطہ کریں</a>
+  </nav>
+
+  <div class="search-container">
+    <input type="text" class="search-box" id="searchInput" placeholder="ادویات تلاش کریں...">
+  </div>
+
+  <section class="hero-nopad">
+    <h2>Ophthalmology <br> آنکھوں کے امراض</h2>
+  
+<p>آنکھوں سے متعلقہ امراض، جنہیں Ophthalmology کی بیماریاں کہا جاتا ہے، بینائی اور آنکھ کے مختلف حصوں کو متاثر کرتی ہیں۔ ان میں موتیا بند، کالا پانی (گلوکوما)، قرنیہ کی بیماریاں، آنکھ کی سوزش، بصارت کی کمزوری، اور شب کوری شامل ہیں۔ یہ بیماریاں عمر، شوگر، وراثت، یا آنکھوں کی چوٹ کی وجہ سے ہو سکتی ہیں۔ بروقت تشخیص، احتیاط، اور مناسب علاج سے بینائی کو محفوظ رکھا جا سکتا ہے، جبکہ بعض صورتوں میں سرجری یا چشمہ لگانے کی ضرورت بھی پیش آتی ہے۔
+</p></section>
+
+  <section class="cards" id="medicineCards">
+
+    <a class="card" href="Ophthalmology/Ophthamology_Blepharitis.html"> <img src="img/Blepharitis.jpg" alt="Ophthalmology"> <p>بلیفریٹس<br>Blepharitis</p></a>
+    <a class="card" href="Ophthalmology/Ophthamology_Blurred Vision.html"> <img src="img/Blurred Vision.jpg" alt="Ophthalmology"> <p>دھندلی نظر<br>Blurred Vision</p></a>
+    <a class="card" href="Ophthalmology/Ophthamology_Cataract.html"> <img src="img/Cataract.jpg" alt="Ophthalmology"> <p>موتیا<br>Cataract</p></a>
+    <a class="card" href="Ophthalmology/Ophthamology_Conjunctivitis.html"> <img src="img/Conjunctivitis.jpg" alt="Ophthalmology"> <p>آشوب چشم<br>Conjunctivitis</p></a>
+    <a class="card" href="Ophthalmology/Ophthamology_Eye Sight Improvement.html"> <img src="img/Eye Sight Improvement.jpg" alt="Ophthalmology"> <p>نظر کی بہتری<br>Eye sight Improvement</p></a>
+    <a class="card" href="Ophthalmology/Ophthamology_Eye Strain.html"> <img src="img/Eye Strain.jpg" alt="Ophthalmology"> <p>آنکھوں کی تھکاوٹ<br>Eye Strain</p></a>
+    <a class="card" href="Ophthalmology/Ophthamology_Photophobia.html"> <img src="img/Photophobia.jpg" alt="Ophthalmology"> <p>روشنی سے حساسیت<br>Photophobia</p></a>
+    <a class="card" href="Ophthalmology/Ophthamology_Watery Eyes.html"> <img src="img/Watery Eyes.jpg" alt="Ophthalmology"> <p>آنسو بہنا<br>Watery Eyes</p></a>
+   
+  </section>
+
+  <footer>
+    &copy; 2025 ہومیوپیتھک اردو. تمام حقوق محفوظ ہیں۔
+  </footer>
+
+  <script>
+    document.querySelectorAll('header, nav, .hero, .cards, footer').forEach(el => {
+      el.addEventListener('mouseenter', () => el.classList.add('no-select'));
+      el.addEventListener('mouseleave', () => el.classList.remove('no-select'));
+    });
+
+    // Search Functionality
+    const searchInput = document.getElementById('searchInput');
+    const cards = document.querySelectorAll('.card');
+
+    searchInput.addEventListener('input', function () {
+      const query = this.value.toLowerCase();
+      cards.forEach(card => {
+        const text = card.innerText.toLowerCase();
+        card.style.display = text.includes(query) ? '' : 'none';
+      });
+    });
+  </script>
+</body>
+</html>
