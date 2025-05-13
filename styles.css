@@ -99,4 +99,7 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
   }
+  h3{
+    text-align: center;
+  }
   
