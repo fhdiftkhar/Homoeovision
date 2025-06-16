@@ -6,7 +6,7 @@ body {
   }
   
   header {
-    background-color: #00695c;
+    background-color: #357EC7;
     color: white;
     padding: 20px 0;
     text-align: center;
@@ -15,7 +15,7 @@ body {
   }
   
   nav {
-    background-color: #004d40;
+    background-color: #357EC7;
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -77,11 +77,16 @@ body {
   }
   
   footer {
-    background-color: #00695c;
+    background-color: #357EC7;
     color: white;
     text-align: center;
     padding: 20px;
     margin-top: 40px;
+  }
+
+  p{
+    text-decoration: none;
+    color: black;
   }
   
   @keyframes fadeDown {
